@@ -1,0 +1,48 @@
+
+# Ignore node modules
+node_modules
+
+# Ignore logs
+npm-debug.log
+yarn-error.log
+
+# Ignore build result
+dist
+
+# Ignore .env files
+.env
+venv
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore Vite cache
+# node_modules/.vite
+
+# Ignore IDE project files
+.idea
+.vscode
+
+# Ignore git files
+.git
+.gitignore
+**/.git
+
+# Ignore other unnecessary files
+.editorconfig
+.gitattributes
+.github
+.gitlab-ci.yml
+.pre-commit-config.yaml
+.readthedocs.yml
+.travis.yml
+venv
+env
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+README.md
+LICENSE
+
