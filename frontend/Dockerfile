@@ -1,3 +1,4 @@
+
 # STEP 1: BUILD THE IMAGE
 # docker build -t docker-reactjs-frontend -f Dockerfile .
 
@@ -10,19 +11,19 @@
 # docker run -d --name container-reactjs-frontend --rm -p 5173:5173 docker-reactjs-frontend
 
 # USE AN OFFICIAL NODE RUNTIME AS THE BASE IMAGE
-FROM node:20-alpine as BUILDER
+FROM node:20-alpine as build-stage
 
 # SET THE WORKING DIRECTORY IN THE CONTAINER TO /APP
 WORKDIR /app
 
 # COPY PACKAGE.JSON TO THE WORKING DIRECTORY IN THE CONTAINER `/app`
-COPY package*.json .
+COPY package*.json /app/
 
 # INSTALL ANY NEEDED PACKAGES SPECIFIED IN PACKAGE.JSON
 RUN npm install
 
 # COPY THE REST OF YOUR APP'S SOURCE CODE FROM YOUR HOST TO YOUR IMAGE FILE SYSTEM
-COPY . .
+COPY . /app/
 
 # BUILD THE APP
 RUN npm run build

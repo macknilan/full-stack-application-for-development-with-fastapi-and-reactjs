@@ -1,9 +1,12 @@
+
 # STEP 1: BUILD THE IMAGE
 # docker build -t docker-fastapi-backend -f Dockerfile .
 
 # STEP 2: RUN THE IMAGE
 # docker run -it --name container-fastapi-backend --rm -p 8000:8000 docker-fastapi-backend
+
 # OR
+
 # STEP 2: RUN THE IMAGE
 # docker run -d --name container-fastapi-backend --rm -p 8000:8000 docker-fastapi-backend
 
